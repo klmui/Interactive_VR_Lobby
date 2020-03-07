@@ -225,6 +225,31 @@ PrefabInstance:
 
         Video Player'
       objectReference: {fileID: 0}
+    - target: {fileID: 7635285173032958790, guid: d377603d395171d429c33985b1a1dd62,
+        type: 3}
+      propertyPath: myColor.r
+      value: 0.07267917
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635285173032958790, guid: d377603d395171d429c33985b1a1dd62,
+        type: 3}
+      propertyPath: myColor.g
+      value: 0.9339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635285173032958790, guid: d377603d395171d429c33985b1a1dd62,
+        type: 3}
+      propertyPath: myColor.b
+      value: 0.048460312
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635285173032958790, guid: d377603d395171d429c33985b1a1dd62,
+        type: 3}
+      propertyPath: myColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635285173032958790, guid: d377603d395171d429c33985b1a1dd62,
+        type: 3}
+      propertyPath: gradientPosition
+      value: 1.08
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -9135990809679012663, guid: d377603d395171d429c33985b1a1dd62, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d377603d395171d429c33985b1a1dd62, type: 3}
@@ -480,6 +505,16 @@ PrefabInstance:
       propertyPath: m_Text
       value: "VR \nMaze"
       objectReference: {fileID: 0}
+    - target: {fileID: 7635285173032958790, guid: d377603d395171d429c33985b1a1dd62,
+        type: 3}
+      propertyPath: myColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635285173032958790, guid: d377603d395171d429c33985b1a1dd62,
+        type: 3}
+      propertyPath: myColor.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -9135990809679012663, guid: d377603d395171d429c33985b1a1dd62, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d377603d395171d429c33985b1a1dd62, type: 3}
@@ -561,6 +596,26 @@ PrefabInstance:
       value: 'VR
 
         Shooter'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635285173032958790, guid: d377603d395171d429c33985b1a1dd62,
+        type: 3}
+      propertyPath: myColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635285173032958790, guid: d377603d395171d429c33985b1a1dd62,
+        type: 3}
+      propertyPath: myColor.g
+      value: 0.29209286
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635285173032958790, guid: d377603d395171d429c33985b1a1dd62,
+        type: 3}
+      propertyPath: myColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635285173032958790, guid: d377603d395171d429c33985b1a1dd62,
+        type: 3}
+      propertyPath: myColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -9135990809679012663, guid: d377603d395171d429c33985b1a1dd62, type: 3}
