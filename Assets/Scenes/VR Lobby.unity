@@ -225,7 +225,8 @@ PrefabInstance:
 
         Video Player'
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -9135990809679012663, guid: d377603d395171d429c33985b1a1dd62, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d377603d395171d429c33985b1a1dd62, type: 3}
 --- !u!1 &705507993
 GameObject:
@@ -479,7 +480,8 @@ PrefabInstance:
       propertyPath: m_Text
       value: "VR \nMaze"
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -9135990809679012663, guid: d377603d395171d429c33985b1a1dd62, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d377603d395171d429c33985b1a1dd62, type: 3}
 --- !u!1001 &4160195989486013287
 PrefabInstance:
@@ -560,5 +562,6 @@ PrefabInstance:
 
         Shooter'
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -9135990809679012663, guid: d377603d395171d429c33985b1a1dd62, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d377603d395171d429c33985b1a1dd62, type: 3}

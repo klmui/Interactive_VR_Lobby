@@ -103,11 +103,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444071329109778270}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8e5d4de9782f1b4f836ba8b088590d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _renderer: {fileID: 0}
 --- !u!114 &4755559728807183869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,11 +116,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444071329109778270}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8e5d4de9782f1b4f836ba8b088590d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _renderer: {fileID: 1444071329109778268}
 --- !u!1 &1444071330318213179
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,6 +133,7 @@ GameObject:
   - component: {fileID: 1444071330318213176}
   - component: {fileID: 1444071330318213126}
   - component: {fileID: 1444071330318213177}
+  - component: {fileID: 7635285173032958790}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -213,3 +216,16 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
+--- !u!114 &7635285173032958790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444071330318213179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e5d4de9782f1b4f836ba8b088590d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderer: {fileID: 1444071330318213126}
