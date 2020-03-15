@@ -39,6 +39,17 @@ public class ObjectFocus : MonoBehaviour
     void Fade()
     {
         // Update delta
+        // Transform is the green cube
+        // Reference is the camera
+        //Debug.DrawLine(reference.position, transform.position, Color.yellow);
+        // Shows forward direction of camera(reference.position) blue axis is z-index
+        Vector3 d = (transform.position - reference.position).normalized; // source to dest
+
+        Debug.DrawRay(reference.position, d, Color.yellow);
+        Debug.DrawRay(reference.position, reference.forward, Color.cyan);
+
+        // Normalize makes it so that the sum of all of its components = 1
+        delta = Vector3.Angle(d.normalized, reference.forward);
     }
 
     // Start is called before the first frame update
@@ -55,6 +66,12 @@ public class ObjectFocus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Fade();
+    }
+
+    private void OnGUI()
+    {
+        GUILayout.Label("delta: " + delta.ToString());
+        GUILayout.Label("fadeAmount: " + fadeAmount.ToString());
     }
 }
