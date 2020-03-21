@@ -69,14 +69,14 @@ public class ObjectFocus : MonoBehaviour
 
     public void GotFocus()
     {
-        Debug.Log(gameObject.name + " got focus");
+        Debug.Log (gameObject.name + " got focus");
         onGotFocus.Invoke(); // invoke the event
     }
 
     public void LostFocus()
     {
-        Debug.Log(gameObject.name + " lost focus");
-        onGotFocus.Invoke(); // invoke the event
+        Debug.Log (gameObject.name + " lost focus");
+        onLostFocus.Invoke(); // invoke the event
     }
 
     void Fade()

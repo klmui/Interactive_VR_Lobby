@@ -104,7 +104,7 @@ public class ObjectFocusManager : MonoBehaviour
 
     void Update()
     {
-        
+        Sort();
     }
 
     #if DEBUG
@@ -116,6 +116,6 @@ public class ObjectFocusManager : MonoBehaviour
             GUILayout.Label("1st : " + firstInList.name);
         }
     }
-#endif
+    #endif
     #endregion
 }
