@@ -8,7 +8,6 @@ public class ObjectFocusManager : MonoBehaviour
     List<ObjectFocus> objectsInRange = new List<ObjectFocus>();
 
     #region Singleton
-
     private static ObjectFocusManager _instance;
     public static ObjectFocusManager Instance
     {
@@ -30,7 +29,6 @@ public class ObjectFocusManager : MonoBehaviour
             _instance = value;
         }
     }
-
     #endregion
 
     // Static makes it accessable from the object itself
@@ -47,6 +45,39 @@ public class ObjectFocusManager : MonoBehaviour
         Instance.objectsInRange.Remove(objectFocus);
     }
 
+    // Sort objects in list on reg basis
+    static void Sort()
+    {
+        if (Instance.objectsInRange.Count > 1)
+        {
+            Instance.objectsInRange.Sort((a, b) => a.delta.CompareTo(b.delta));
+        }
+
+        Instance.firstInList = Instance.objectsInRange.Count > 0 ? Instance.objectsInRange[0] : null;
+    }
+    #endregion
+
+    #region Instance Properties & Methods
+    private ObjectFocus _firstInList;
+    public ObjectFocus firstInList
+    {
+        get { return _firstInList; }
+        private set
+        {
+            if (value != _firstInList)
+            {
+                // On old one
+                if (_firstInList)
+                    _firstInList.LostFocus();
+
+                _firstInList = value;
+
+                // On changed value
+                if (_firstInList)
+                    _firstInList.GotFocus();
+            }
+        }
+    }
     #endregion
 
     #region MonoBehaviour
@@ -80,7 +111,11 @@ public class ObjectFocusManager : MonoBehaviour
     private void OnGUI()
     {
         GUILayout.Label("Objects in Focus : " + Count.ToString());
+        if (firstInList)
+        {
+            GUILayout.Label("1st : " + firstInList.name);
+        }
     }
-    #endif  
+#endif
     #endregion
 }
