@@ -1,15 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using System;
 
 public class ObjectFocus : MonoBehaviour
 {
+
+    // Need to use System for Serializable (show up in Unity)
+    [Serializable]
+    public class FloatEvent : UnityEvent<float>
+    {
+
+    }
+
     [SerializeField] Transform reference;
 
     [SerializeField] float minAngle = 10; // Distance to camera is 10 or less, label will be fully opaque
-    [SerializeField] float maxAngle = 10;
+    [SerializeField] float maxAngle = 30;
 
-    private float _fadeAmount;
+    [SerializeField] FloatEvent valueChanged;
+
+    private float _fadeAmount = -1; // Update at start
     public float fadeAmount
     {
         get { return _fadeAmount; }
@@ -18,11 +30,12 @@ public class ObjectFocus : MonoBehaviour
             if(value != _fadeAmount)
             {
                 _fadeAmount = value;
+                valueChanged.Invoke(_fadeAmount);
             }
         }
     }
 
-    private float _delta;
+    private float _delta = -1;
     public float delta
     {
         get { return _delta; }
@@ -31,7 +44,9 @@ public class ObjectFocus : MonoBehaviour
             if (value != _delta)
             {
                 _delta = value;
-                // Update fade amount value
+                // Update fade amount value whenever delta changes
+                // Between 10 and 30 degrees, fadeAmount is 1. Bigger is 0.
+                fadeAmount = Mathf.InverseLerp(maxAngle, minAngle, _delta);
             }
         }
     }
@@ -69,9 +84,12 @@ public class ObjectFocus : MonoBehaviour
         Fade();
     }
 
-    private void OnGUI()
-    {
-        GUILayout.Label("delta: " + delta.ToString());
-        GUILayout.Label("fadeAmount: " + fadeAmount.ToString());
-    }
+    // Only runs if dev build is turned on in build settings
+    //#if DEBUG
+    //void OnGUI()
+    //{
+    //    GUILayout.Label("delta : " + delta.ToString());
+    //    GUILayout.Label("fadeAmount : " + fadeAmount.ToString());
+    //}
+    //#endif
 }

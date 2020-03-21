@@ -191,6 +191,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c039893db526a1f44a8fc6fd33853b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reference: {fileID: 0}
+  minAngle: 10
+  maxAngle: 30
+  valueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7635285173032958790}
+        m_MethodName: set_gradientPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1444071330318213179
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,8 +316,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 0}
+    key0: {r: 0.7019608, g: 0.7019608, b: 0.7019608, a: 0}
+    key1: {r: 0.7019608, g: 0.7019608, b: 0.7019608, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}

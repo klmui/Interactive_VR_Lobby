@@ -9,7 +9,7 @@ public class MaterialGradientModifier : MonoBehaviour
     [SerializeField] private Gradient gradient; // Tell Unity to serialize field, only available from Unity
 
     // Disappear from inspector if no public
-    float _gradientPosition;
+    float _gradientPosition = -1;
     public float gradientPosition
     {
         get { return _gradientPosition; }
@@ -43,11 +43,11 @@ public class MaterialGradientModifier : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    private void Start()
-    {
-        //SetGradientPosition(0);
-        gradientPosition = 0;
-    }
+    //private void Start()
+    //{
+    //    //SetGradientPosition(0);
+    //    gradientPosition = 0;
+    //}
 
     // Update is called once per frame
     //private void Update()
