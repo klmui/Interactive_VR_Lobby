@@ -50,6 +50,15 @@ public class ObjectFocus : MonoBehaviour
                 // Update fade amount value whenever delta changes
                 // Between 10 and 30 degrees, fadeAmount is 1. Bigger is 0.
                 fadeAmount = Mathf.InverseLerp(maxAngle, minAngle, _delta);
+
+                if (_delta <= minAngle)
+                {
+                    // This refers to current instance of the object focus 
+                    ObjectFocusManager.Add(this);
+                } else
+                {
+                    ObjectFocusManager.Remove(this);
+                }
             }
         }
     }

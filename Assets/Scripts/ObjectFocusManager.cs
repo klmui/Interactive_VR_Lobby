@@ -33,6 +33,22 @@ public class ObjectFocusManager : MonoBehaviour
 
     #endregion
 
+    // Static makes it accessable from the object itself
+    #region Static Properties & Methods
+    static public int Count { get { return Instance.objectsInRange.Count; } }
+    static public void Add(ObjectFocus objectFocus)
+    {
+        if (Instance.objectsInRange.Contains(objectFocus))
+            return;
+        Instance.objectsInRange.Add(objectFocus);
+    }
+    static public void Remove(ObjectFocus objectFocus)
+    {
+        Instance.objectsInRange.Remove(objectFocus);
+    }
+
+    #endregion
+
     #region MonoBehaviour
     private void Awake()
     {
@@ -59,5 +75,12 @@ public class ObjectFocusManager : MonoBehaviour
     {
         
     }
+
+    #if DEBUG
+    private void OnGUI()
+    {
+        GUILayout.Label("Objects in Focus : " + Count.ToString());
+    }
+    #endif  
     #endregion
 }
