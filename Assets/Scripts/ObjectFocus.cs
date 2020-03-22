@@ -9,10 +9,7 @@ public class ObjectFocus : MonoBehaviour
 
     // Need to use System for Serializable (show up in Unity)
     [Serializable]
-    public class FloatEvent : UnityEvent<float>
-    {
-
-    }
+    public class FloatEvent : UnityEvent<float>{}
 
     [SerializeField] Transform reference;
 
