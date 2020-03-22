@@ -32,7 +32,7 @@ public class TouchInputManager : MonoBehaviour
                     onTouch.Invoke(); // invoke event associated with touch begin
                     break;
                 case TouchPhase.Ended:
-                    onTouchCancel.Invoke();
+                    Cancel();
                     break;
                 default:
                     // time since last update call
@@ -45,6 +45,22 @@ public class TouchInputManager : MonoBehaviour
                     }
                     break;
             }
+        }
+    }
+
+    void Cancel()
+    {
+        timer = 0;
+        // Reset progress bar by resetting time
+        onTouchTimerUpdate.Invoke(timerUpdateCurve.Evaluate(Mathf.InverseLerp(0, delay, timer)));
+        onTouchCancel.Invoke();
+    }
+
+    private void OnDisable()
+    {
+        if (Input.touchCount > 0)
+        {
+            Cancel();
         }
     }
 }
